@@ -229,3 +229,45 @@ input:not(:placeholder-shown) + label {
 ::selection {
 	background: rgba(150, 129, 223, 0.3);
 }
+
+.inputContainer:has(input.error) label {
+	color: #ff0000 !important;
+}
+
+.buttonGroup {
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+}
+
+.resetBtn {
+	padding: 0.75rem 1.5rem;
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 0.375rem;
+	font-weight: 500;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	flex: 1;
+	min-width: 120px;
+}
+
+.resetBtn:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.5);
+	transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+	.buttonGroup {
+		flex-direction: column;
+	}
+
+	.resetBtn {
+		padding: 0.6rem 1.2rem;
+		font-size: 0.9rem;
+	}
+}
